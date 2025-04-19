@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>CALCULADORA DE IMC</title>
+</head>
+<body>
+
+  <script>
+    //Peça o peso e a altura. Calcule o IMC e diga a classificação:
+    //Abaixo de 18.5 → Abaixo do peso
+    //18.5 a 24.9 → Peso normal
+    // 25 a 29.9 → Sobrepeso
+    // 30+ → Obesidade
+    
+    // CALCULADORA DE imc
+    let peso = parseFloat(prompt("Digite o seu peso"));
+    let altura = parseFloat(prompt("Digite a sua altura em m"));
+    let imc = (peso/(altura**2)).toFixed((2)); // reduz o resultado para apenas 2 casas decimais.
+    
+    if (imc <18.5) {
+      console.log("O seu IMC é " + imc + " e você está abaixo do peso ideal.")
+    } else if (imc >= 18.5 && imc <=24.9) {
+      console.log("O seu IMC é " + imc + " e você está dentro do peso ideal.")
+    } else if (imc >= 25 && imc <=29.9) {
+      console.log("O seu IMC é " + imc + " e você está na faixa de sobrepeso.")
+    } else {
+      console.log("O seu IMC é " + imc + " e você está na faixa de obesidade.")
+    }
+    
+    </script>
+</body>
+</html>
